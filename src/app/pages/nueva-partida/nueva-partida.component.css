@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Fredoka One', cursive;
+}
+
+.navparent {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  max-height: 14em;
+  background-color: #EE4266;
+  border-bottom: solid;
+  width: 100%;
+  padding: 1em 0;
+}
+
+.navparent .navempresa-parent {
+  position: relative;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.navparent .navempresa-parent .navempresa-img {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-radius: 50%;
+  width: 5em;
+  height: 5em;
+  border: solid 3px black;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.navparent .navempresa-parent .navempresa-img img {
+  max-height: 100%;
+}
+
+.navparent .navempresa-parent .navempresa-nombre {
+  font-family: 'Fredoka One', cursive;
+  color: #EEEEEE;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.navparent .navempresa-parent .navempresa-plan {
+  font-family: 'Fredoka One', cursive;
+  color: black;
+}
+
+.navparent .navempresa-tokens .navempresa-tokens-img {
+  margin-left: -35px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 0px;
+  width: 5em;
+  height: 5.6em;
+}
+
+.navparent .navempresa-tokens .container-tokens {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border: solid 3px #292929;
+  border-radius: 10px;
+  background-color: white;
+  padding: 0 1em;
+}
+
+.navparent .navempresa-tokens .text-tokens {
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  color: black;
+  font-family: 'Fredoka One', cursive;
+  font-size: 12px;
+}
+
+.navparent .navempresa-tokens .num-tokens {
+  margin-left: 1em;
+  margin-right: 1em;
+  color: #EE4266;
+  font-size: 1.5em;
+}
+
+.navparent .navempresa-tokens .sumar-tokens {
+  font-family: 'Fredoka One', cursive;
+  color: black;
+  width: 60px;
+}
+
+.navparent .navempresa-tokens .sumar-tokens .img {
+  height: 40px;
+}
+
+.navparent .button-help {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 3.5em;
+  height: 3.5em;
+}
+
+.navparent .button-settings {
+  height: 40px;
+}
+/*# sourceMappingURL=nueva-partida.component.css.map */

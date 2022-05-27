@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Fredoka One', cursive;
+}
+
+
+.navparent{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    max-height: 14em;
+    background-color: #EE4266;
+    border-bottom: solid;    
+    width: 100%;
+    padding: 1em 0;
+
+    .nueva-partida{
+        
+        .nuevatxt{
+            color: white;
+            font-size: 28px;
+            text-align: center;
+            line-height: 40px;
+        }
+    }
+
+    .navempresa-tokens{
+
+        .navempresa-tokens-img{
+            margin-left: -35px;
+            flex-direction: row;
+            padding: 0px;
+            width: 5em;
+            height: 5.6em;
+        }
+        .container-tokens {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            border: solid 3px #292929;
+            border-radius: 10px;
+            background-color: white;
+            padding: 0 1em;
+        }
+        .text-tokens{
+            align-items: left;
+            color:black;
+            font-family: 'Fredoka One', cursive;
+            font-size: 20px;
+        }
+        .num-tokens{
+            margin-left: 1em;
+            margin-right: 1em;
+            color: #EE4266;
+            font-size: 36px;
+            -webkit-text-stroke: 2px black;        
+        }
+        .sumar-tokens{
+            font-family: 'Fredoka One', cursive;
+            color: black;
+            width: 60px;
+                .img{
+                    height: 40px;
+                
+            }
+        }
+    }
+   
+    .button-help{
+        flex-direction: row;
+        width: 3.5em;
+        height: 3.5em;
+    }
+    
+}
+
+.container{
+    width: 900px;
+}
+
+.titulo1{
+    margin-top: 3em;
+    font-size: 18px;
+}
+
+.item-partida {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 900px;
+    height: 70px;
+    border-radius: 10px;
+    border: solid 3px #EE4266;
+    margin-bottom: 0.5rem;
+}
+
+.item-logo {
+    width: 80px;
+    margin-left: 1rem;
+}
+
+.status-partida {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    text-align: center;
+}
+
+.status-partida p {
+    margin: 0;
+}
+
+.status-partida2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    text-align: center;
+}
+
+.partida-activa {
+    color: #A5EB78;
+}
+
+.partida-fin {
+    color: #818181;
+}
+
+.partida-prog {
+    color: #FFD23F;
+}
+
+.boton-edit {
+    margin-left: 0.5rem;
+    cursor: pointer;
+}
+
+.icon_status {
+    margin-right: 0.5rem;
+}
+
+.item-url {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+    height: 30px;
+    background-color: #EFEFEF;
+    border-radius: 5px;
+    margin-right: 1rem;
+}
+
+.item-url-hidden {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+    height: 30px;
+    background-color: #EFEFEF;
+    border-radius: 5px;
+    margin-right: 1rem;
+    visibility: hidden;
+}
+
+.url {
+    color: #808080;
+    font-size: 10px;
+}
+
+.icon-url {
+    margin-left: 0.5rem;
+}
+
+.icon-copiar {
+    background-color: #D1D1D1;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.container-nueva-partida {
+    width: 900px;
+}
+
+.rotulo23 {
+    font-size: 18px;
+}
+
+.container-select-juego {
+    margin-top: 2rem;
+}
+
+.container-programar {
+    margin-top: 2rem;
+}
+
+.seleccion-juegos {
+    background-color: white;
+    border: solid 3px #EE4266;
+    border-radius: 10px;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-juego {
+    display: flex;
+    align-items: center;
+    width: 850px;
+    justify-content: space-around;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+.descripcion-juego {
+    color: #818181;
+    font-size: 14px;
+    width: 450px;
+}
+
+.boton-demo {
+    border: solid 2px #292929;
+    border-radius: 10px;
+    width: 160px;
+    height: 35px;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    margin-left: 2rem;
+    box-shadow: 2px 2px 2px rgb(41, 41, 41, 0.5);
+}
+
+.boton-demo:hover {
+    box-shadow: 2px 2px 2px rgb(41, 41, 41, 0.8);
+}
+
+.boton-demo:hover p {
+    color: #EE4266;
+}
+
+.icon-juego-select{
+    width:65px;
+}
+
+mat-checkbox{
+    border-radius: 10px;
+}
+
+.descripcion-item {
+    color: #818181;
+    font-size: 12px;
+    margin-top: -0.5rem;
+}
+
+.descripcion-item2 {
+    color: #818181;
+    font-size: 12px;
+    margin-left: 3rem;
+
+}
+
+.item-ahora {
+    display: flex;
+    align-items: center;
+}
+
+.item-prog {
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+}
+
+.titulo-select-tiempo {
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+}
+
+.titulo-select-tiempo img {
+    margin-right: 0.5rem;
+}
+
+.seleccion-tiempo {
+    background-color: white;
+    border: solid 3px #EE4266;
+    border-radius: 10px;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+}
+
+.botones{
+    display: flex;
+    justify-content: space-between;    
+    line-height: 40px;
+
+}
+
+.boton-volver {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 240px;
+    background-color: white;
+    border: solid 2px #292929;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgb(41, 41, 41, 0.5);
+    cursor: pointer;
+}
+
+.boton-volver:hover {
+    box-shadow: 2px 2px 2px rgb(41, 41, 41, 0.9);
+}
+
+.boton-guardar {
+    width: 240px;
+    background-color: #A5EB78;
+    border: solid 2px #292929;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgb(41, 41, 41, 0.5);
+    text-align: center;
+    cursor: pointer;
+}
+
+.boton-guardar:hover {
+    color: white;
+    box-shadow: 2px 2px 2px rgb(41, 41, 41, 0.7);
+}
+
+.boton-guardar:hover p{
+    color: white;
+}

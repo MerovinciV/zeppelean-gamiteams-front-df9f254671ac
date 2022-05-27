@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AACA,AAAA,eAAe,CAAA;EACX,KAAK,EAAE,IAAI;CACd",
+    "sources": [
+        "reset-pass.component.scss"
+    ],
+    "names": [],
+    "file": "reset-pass.component.css"
+}

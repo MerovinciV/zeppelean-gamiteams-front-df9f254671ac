@@ -1,0 +1,76 @@
+<div class="navparent" >
+    <div class="container"  fxLayout="row" fxLayoutAlign="start center">
+        <div fxFlex class="sumar-tokens" fxLayout>
+            <img src="./assets/img/add.svg" alt="">
+            <div class="mleft-1">{{ 'pago-tokens.titleTienda' | translate }}</div>
+        </div>
+        <div class="navempresa-tokens">
+            <div class="container-tokens">
+                <div class="navempresa-tokens-img">
+                    <img class="" src="./assets/img/ranura.svg" alt="Oops ranura!">
+                </div>
+                <div class="text-tokens mleft-1">
+                    {{ 'pago-tokens.yourTokens' | translate }}</div>
+                <div class="num-tokens mleft-1 mright-1">
+                    50
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="container-pagos mtop-2" fxLayout="row" fxLayoutAlign="start space-around"> 
+
+        <div class="container-left" fxFlex>
+            <div class="title-pagos">
+                {{ 'pago-tokens.titleFinPago' | translate }}</div>
+            <div class="container-titular mtop-2" fxLayoutAlign="start space-around" >
+                <div class="titular-img ">
+                    <img src="./assets/img/icon-user.svg" alt="">
+                </div>
+                <div class="title mleft-1">
+                    {{ 'pago-tokens.titular' | translate }}</div>
+            </div>
+            <div class="input-datos mtop-1">
+                <label for="utitular"></label>
+                <input type="text">
+            </div>
+        </div>    
+        <div class="container-right" fxFlex="35" fxLayout="column" fxLayoutAlign="start space-around">
+            <div class="title-pagos">&nbsp;</div>
+            <div class="container-totales mtop-2">
+                <div class="title-totales" fxLayout>
+                    <div class="totales-img">
+                        <img src="./assets/img/shopping-cart.svg" alt="">
+                    </div>
+                    <div class="letra-totales mleft-1">{{ 'pago-tokens.titleResumen' | translate }}</div>
+                </div>
+                <div class="caja-totales mtop-1" fxLayout fxLayoutAlign="start center">
+                    <div fxFlex class="">
+                        <div class="line">5 tokens</div>
+                        <div class="line">IVA</div>
+                        <div class="line align-right totales">Total</div>
+                    </div>
+                    <div fxFlex="10"></div>
+                    <div class="">
+                        <div class="line">399€</div>
+                        <div class="line">83,79€</div>
+                        <div class="line totales">482,79€</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="buttons-pagos mtop-10" fxLayout="row" fxLayourAlign="center center">
+        <div class="boton-volver" fxLayout="row" fxLayoutAlign="center center" routerLink="/comprar-tokens">
+            <img class="mright-1" src="./assets/img/icon_volver.svg" alt="">
+            <div>{{ 'pago-tokens.botonVolver' | translate }}</div>
+        </div>
+        <div fxFlex></div>
+        <div class="button-finalizar" routerLink="/compra-factura">
+            <div >{{ 'pago-tokens.botonFinalizar' | translate }}</div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,67 @@
+<div class="navparent" >
+    <div class="container"  fxLayout="row" fxLayoutAlign="start center">
+        <div fxFlex class="sumar-tokens" fxLayout>
+            <img src="./assets/img/add.svg" alt="">
+            <div class="mleft-1">{{ 'comprar-tokens.titleTienda' | translate }}</div>
+        </div>
+        <div class="navempresa-tokens">
+            <div class="container-tokens">
+                <div class="navempresa-tokens-img">
+                    <img class="" src="./assets/img/ranura.svg" alt="Oops ranura!">
+                </div>
+                <div class="text-tokens mleft-1">
+                    {{ 'comprar-tokens.yourTokens' | translate }}</div>
+                <div class="num-tokens mleft-1 mright-1">
+                    50
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="super-container-tienda">
+    <div class="container-tienda">
+        <div class="header-tienda mtop-2 mbottom-2">
+            <div class="title mbotton-1">{{ 'comprar-tokens.titlePack' | translate }}</div>
+            <div class="subtitle mtop-1">{{ 'comprar-tokens.subtitlePack' | translate }}</div>
+        </div>
+        <div class="selector-packs">
+            <div class="pack-token" routerLink="/pago-tokens">
+                <div class="imagen-pack">
+                    <img src="./assets/img/token1.svg" alt="">
+                </div>
+                <div class="boton-comprar">
+                    <div class="precio">89€</div>
+                </div>
+                <div class="precio-token"> 89€/token <br> {{ 'comprar-tokens.subtitlePartidas1' | translate }}</div>
+            </div>
+
+            <div class="pack-token" routerLink="/pago-tokens">
+                <div class="imagen-pack">
+                    <img src="./assets/img/token5.svg" alt="">
+                </div>
+                <div class="boton-comprar">
+                    <div class="precio">249€</div>
+                </div>
+                <div class="precio-token"> 50€/token <br> {{ 'comprar-tokens.subtitlePartidas5' | translate }}</div>
+            </div>
+
+            <div class="pack-token" routerLink="/pago-tokens">
+                <div class="imagen-pack">
+                    <img src="./assets/img/token10.svg" alt="">
+                </div>
+                <div class="boton-comprar">
+                    <div class="precio">399€</div>
+                </div>
+                <div class="precio-token"> 40€/token <br> {{ 'comprar-tokens.subtitlePartidas10' | translate }}</div>
+            </div>
+        </div>
+        <div class="iva">{{ 'comprar-tokens.subtitleIVA' | translate }}</div>
+        
+
+        <div class="boton-volver" fxLayout="row" fxLayoutAlign="center center" routerLink="/home">
+            <img class="mright-1" src="./assets/img/icon_volver.svg" alt="">
+            <div>{{ 'comprar-tokens.botonVolver' | translate }}</div>
+        </div>
+    </div>
+</div>

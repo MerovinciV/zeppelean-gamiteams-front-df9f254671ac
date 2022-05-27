@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Fredoka One', cursive;
+}
+
+.navparent {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  max-height: 14em;
+  background-color: #EE4266;
+  border-bottom: solid;
+  width: 100%;
+  padding: 1em 0;
+}
+
+.sumar-tokens {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Fredoka One', cursive;
+  font-size: 20px;
+  color: white;
+  line-height: 50px;
+}
+
+.sumar-tokens .img {
+  height: 40px;
+}
+
+.super-container-fact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container-tokens-hidden {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  visibility: hidden;
+}
+
+.item-factura {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border: solid 3px #EE4266;
+  border-radius: 10px;
+  background-color: white;
+  margin-bottom: 0.5rem;
+  margin-top: 1em;
+  height: 60px;
+}
+
+.fact-fecha, .ref-factura, .desc-factura {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.fact-fecha img, .ref-factura img, .desc-factura img {
+  margin-right: 0.5rem;
+  width: 21px;
+}
+
+.desc-factura {
+  cursor: pointer;
+}
+
+.desc-factura p {
+  color: #818181;
+}
+
+.desc-factura:hover p {
+  color: #A5EB78;
+}
+
+.title-facturas {
+  font-size: 22px;
+}
+/*# sourceMappingURL=facturas.component.css.map */

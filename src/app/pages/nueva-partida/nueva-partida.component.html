@@ -1,0 +1,132 @@
+<div class="navparent" >
+    <div class="container" fxLayout="row" fxLayoutAlign="space-around center">
+        <div class="nueva-partida" fxLayout fxLayourAlign="center center">
+            <img src="./assets/img/cartas.svg" alt="">
+            <div class="nuevatxt mleft-10px">{{ 'nueva-partida.tituloPartida' | translate }}</div>
+        </div>
+        <div class="navempresa-tokens mleft-10" fxLayout fxLayourAlign="center center">
+            <div class="container-tokens" >
+                <div class="navempresa-tokens-img">
+                    <img class="" src="./assets/img/ranura.svg" 
+                    alt="Oops ranura!">
+                </div>
+                <div class="text-tokens">
+                    {{ 'nueva-partida.yourTokens' | translate }} 
+                </div>
+                <div class="num-tokens">
+                    50
+                </div>
+                <div class="sumar-tokens" fxLayout="column" 
+                fxLayoutAlign="center center" routerLink="/comprar-tokens">
+                    <img src="./assets/img/add.svg" alt="">
+                    <div>{{ 'nueva-partida.buyTokens' | translate }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mtop-10" fxLayout="column" fxLayourAlign="center center">
+    <form [formGroup]="juegosForm" (ngSubmit)="onJuegosSubmit()">
+        <div class="bloque1">
+            <div class="titulo1">{{ 'nueva-partida.chooseGame' | translate }}</div>
+            <div class="seleccion-juegos mtop-1">
+                <div class="item-juego">
+                    <mat-checkbox [color]="'accent'"
+                        id="digiKudos"
+                        type="mat-checkbox"
+                        formControlName="digiKudos"
+                        (change)="onCheckboxChange($event, 2)">
+                    </mat-checkbox>
+                    <img src="./assets/img/logo_DK.svg" alt="" class="icon-juego-select">
+                    <div class="descripcion-juego">{{ 'nueva-partida.digiKudos' | translate }}</div>
+                    <div class="button-white">
+                        <div>{{ 'nueva-partida.botonDemo' | translate }}</div>
+                    </div>
+                </div>
+                <div class="item-juego">
+                    <mat-checkbox [color]="'accent'"
+                        id="digiCrea"
+                        type="mat-checkbox"
+                        formControlName="digiCrea"
+                        (change)="onCheckboxChange($event, 1)">
+                    </mat-checkbox>
+                    <img src="./assets/img/logo_DC.svg" alt="" class="icon-juego-select">
+                    <div class="descripcion-juego">{{ 'nueva-partida.digiCrea' | translate }}</div>
+                    <div class="button-white">
+                        <div>{{ 'nueva-partida.botonDemo' | translate }}</div>
+                    </div>
+                </div>
+                <div class="item-juego">
+                    <mat-checkbox class="" [color]="'accent'"
+                        id="digiReta"
+                        type="mat-checkbox"
+                        formControlName="digiReta"
+                        (change)="onCheckboxChange($event, 3)">
+                    </mat-checkbox>
+                    <img src="./assets/img/logo_DR.svg" alt="" class="icon-juego-select">
+                    <div class="descripcion-juego">{{ 'nueva-partida.digiReta' | translate }}</div>
+                    <div class="button-white">
+                        <div>{{ 'nueva-partida.botonDemo' | translate }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bloque2">
+            <div class="container-programar">
+                <div class="rotulo23 mbottom-1">{{ 'nueva-partida.chooseTime' | translate }}</div>
+                <div class="descripcion-item mbottom-1">{{ 'nueva-partida.subtitleTime' | translate }}</div>
+                <div class="seleccion-tiempo">
+                    <div class="item-ahora">
+                        <div class="titulo-select-tiempo">
+                            <mat-checkbox class="mleft-1 mright-1" [color]="'accent'"
+                                id="now"
+                                type="mat-checkbox"
+                                formControlName="now"
+                                (change)="onCheckboxChangeTime($event, 2)">
+                            </mat-checkbox>
+                            <img src="./assets/img/icon_ahora.svg" alt="">
+                            <div>{{ 'nueva-partida.rightNow' | translate }}</div>
+                        </div>
+                    </div>
+                    <div class="item-programar mtop-2">
+                        <div class="titulo-select-tiempo">
+                            <mat-checkbox class="mright-1 mleft-1" [color]="'accent'"
+                                id="later"
+                                type="mat-checkbox"
+                                formControlName="later"             
+                                (change)="onCheckboxChangeTime($event, 1)">
+                            </mat-checkbox>
+                            <img src="./assets/img/icon_programada.svg" alt="">
+                            <div>{{ 'nueva-partida.programDate' | translate }}</div><div class="mleft-1"></div>
+                            <mat-form-field appearance="fill">
+                                <mat-label>Elige tu fecha</mat-label>
+                                <input matInput [matDatepicker]="picker"
+                                formControlName="picker"
+                                >
+                                <!-- (dateInput)="addEvent('input', $event)" 
+                                (dateChange)="addEvent('change', $event)" -->
+                                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="descripcion-item2 mtop-1 mleft-7">
+                        {{ 'nueva-partida.warningTime' | translate }}  {{ currentDateTime }}
+                    </div>
+                </div>    
+            </div>
+            <div class="botones mtop-2" >
+                <div class="button-white" routerLink="/home">
+                    <img src="./assets/img/icon_volver.svg" alt="">
+                    <div>{{ 'nueva-partida.botonVolver' | translate }}</div>
+                </div>
+                <button class="boton-guardar" type="submit">
+                    <div class="text-button">{{ 'nueva-partida.botonFinalizar' | translate }}</div>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+
+

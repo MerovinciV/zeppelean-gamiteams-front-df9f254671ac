@@ -1,0 +1,61 @@
+<div class="dialog-body">
+    <div mat-dialog-title>Cambiar contraseña</div>
+</div>
+
+
+<form [formGroup]="resetPassForm" (ngSubmit)="onSubmit()" class="example-form">
+  <mat-dialog-content class="mat-typography">
+    <div class="mtop-1 mbottom-1">
+      <div class="passtxt">
+        Nueva contraseña
+      </div>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Escribe tu nueva contraseña</mat-label>
+          <input 
+          [ngClass]="{ 'is-invalid': submitted && f.password.errors }"
+          matInput 
+          id="password"
+          name="password"
+          type="password" 
+          formControlName="password"
+          #pass 
+          maxlength="20" 
+          placeholder="Utiliza mayúsculas, símbolos y números">
+          <mat-hint align="end">{{pass.value.length}} / 20</mat-hint>
+        </mat-form-field>
+    </div>
+    <div class="mtop-1 mbottom-1">
+      <div class="passtext">
+        Repetir nueva contraseña
+      </div>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Repite nueva contraseña</mat-label>
+          <input 
+          matInput 
+          id="confirmPassword"
+          [ngClass]="{ 'errores': (submitted && f.confirmPassword.errors?.mustMatch) }"
+          name="confirmPassword"
+          type="password" 
+          formControlName="confirmPassword"
+          #confirmPassword 
+          maxlength="20">
+          <mat-hint align="end">{{confirmPassword.value.length}} / 20</mat-hint>
+        </mat-form-field>
+        <!-- <div *ngIf="invalidPass" class="errores">Debes rellenar los dos campos con la misma contraseña</div> -->
+        <div *ngIf="submitted && f.confirmPassword.errors?.mustMatch" class="errores">Password and confirm not match</div>
+    </div>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancelar</button>
+    <button type="submit" class="button-green" style="font-size: 14px;" cdkFocusInitial>
+        <div class="text-button">
+        Guardar nueva contraseña
+        </div>
+    </button>
+  </mat-dialog-actions>
+</form>
+
+
+
+
+<!-- Validator para igualar la contraseña, PUT  -->

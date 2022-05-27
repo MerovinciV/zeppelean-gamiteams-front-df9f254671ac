@@ -1,0 +1,47 @@
+<div class="login-container">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-parent ptop-5" fxLayout="column" fxLayoutAlign="center center">
+        <div class="login_image" fxLayout fxLayoutAlign="center center">
+            <img src="./assets/img/logo_DC.svg" alt="¡Oops, no deberías estar viendo esto!">
+        </div>
+    
+        <div  class="login-form mtop-3">
+                <div  class="custom-form" fxLayout="column" fxLayoutAlign="center center">
+                    <div class="inputemail">
+                        <span class="material-icons">mail_outline</span>
+                        <input class="input-email" [ngClass]="{ 'is-invalid': submitted && f['email'].errors }"
+                        id="email"
+                        formControlName="email"
+                        type="email"
+                        name="email"
+                        placeholder="{{ 'login.placeholderEmail' | translate }}"
+                        required="required"
+                        />
+                    </div>
+                    <div class="inputpass">
+                        <span class="material-icons">lock_outline</span>
+                        <input class="input-pass"
+                        id="password"
+                        formControlName="password"
+                        type="password"
+                        name="password"
+                        placeholder="{{ 'login.placeholderPass' | translate }}"
+                        required="required"
+                        >
+                    </div>
+                <div *ngIf="submitted && loginForm.invalid" class="error mtop-1">
+                    <div *ngIf="f['email'].errors!['required']" class="errorMail">¡El email es necesario!</div>
+                    <div *ngIf="f['password'].errors!['required']" class="errorPass">¡La contraseña es necesaria!</div>
+                </div>
+                <div>{{error}}</div>
+                <div fxLayout fxLayoutAlign="center center">
+                    <button class="login-button mtop-1 mbottom-1" routerLink="/home">{{ 'login.enter' | translate }}</button>
+                </div>
+            </div>
+        </div>
+        <mat-checkbox id="remember" formControlName="remember" class="example-section mbottom-1">{{ 'login.rememberPass' | translate }}</mat-checkbox>
+        <div class="remind-pass" routerLink="/reset-pass" (click)="openDialog()">{{ 'login.forgotPass' | translate }}</div>
+        <div>
+            <div class="create-button mtop-2" routerLink="/crear-cuenta">{{ 'login.createAccount' | translate }}</div>
+        </div>
+    </form>
+</div>

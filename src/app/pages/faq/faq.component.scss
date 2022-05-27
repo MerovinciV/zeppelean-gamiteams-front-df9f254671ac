@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Fredoka One', cursive;
+}
+
+
+.navparent{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    max-height: 14em;
+    background-color: #EE4266;
+    border-bottom: solid;    
+    width: 100%;
+    padding: 1em 0;
+}
+
+
+.sumar-tokens{
+    display: flex;
+    font-family: 'Fredoka One', cursive;
+    font-size: 20px;
+    color: white;
+    line-height: 50px;
+
+    .img{
+            height: 40px;
+        
+    }
+}
+
+.title-faq{
+    font-size:30px;
+    color: black;
+}
+
+.faq-question{
+    color:black;
+    font-size: 16px;
+    margin-top: 1em;
+}
+
+.faq-text{
+    color: #818181;
+    font-size: 14px;
+}
+
+.boton-volver {
+
+    display: flex;
+    background-color: white;
+    border: solid 2px #292929;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgb(41, 41, 41, 0.5);
+    cursor: pointer;
+    width: 204px;
+    line-height: 40px;
+}
+
+.boton-volver:hover {
+    box-shadow: 2px 2px 2px rgb(41, 41, 41, 0.9);
+}

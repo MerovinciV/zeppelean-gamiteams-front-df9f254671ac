@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Fredoka One', cursive;
+}
+
+img{
+    height: 320px;
+}
+
+.title{
+    font-size: 32px;
+}
+
+.enlace-facturas{
+    a{
+        color: #818181;
+        &:hover{
+            color: black;
+        }
+    }
+}
+
+
+.button-continuar {
+    width: 240px;
+    background-color: #A5EB78;
+    border: solid 2px #292929;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgb(41, 41, 41, 0.5);
+    text-align: center;
+    cursor: pointer;
+    line-height: 40px;
+}
+
+.button-continuar:hover {
+    color: white;
+    box-shadow: 2px 2px 2px rgb(41, 41, 41, 0.7);
+}
+
+.button-continuar:hover p{
+    color: white;
+}

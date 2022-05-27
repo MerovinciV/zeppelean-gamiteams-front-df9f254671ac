@@ -1,0 +1,94 @@
+<div class="navparent" >
+    <div class="container" fxLayout="column" fxLayoutAlign="start space-around">
+        <div class="sumar-tokens" fxLayout fxLayoutAlign="start space-around">
+            <img src="./assets/img/add.svg" alt="">
+            <div class="mleft-1">
+                {{ 'crear-datospago.navbarTitle' | translate }}
+            </div>
+        </div>
+    </div>
+</div>
+    
+<div class="container">
+    <div class="container-pagos mtop-2" fxLayout="row" fxLayoutAlign="start space-around"> 
+
+        <div class="container-left" fxFlex>
+            <div class="title-pagos">
+                {{ 'crear-datospago.titleFinRegistro' | translate }}
+            </div>
+            <div class="container-titular mtop-2" fxLayoutAlign="start space-around" >
+                <div class="titular-img ">
+                    <img src="./assets/img/icon-user.svg" alt="">
+                </div>
+                <div class="title mleft-1">
+                    {{ 'crear-datospago.campoTitular' | translate }}
+                </div>
+            </div>
+            <div class="input-datos mtop-1">
+                <label for="utitular"></label>
+                <input type="text">
+            </div>
+            <div class="container-titular mtop-1" fxLayoutAlign="start space-around" >
+                <div class="titular-img ">
+                    <img src="./assets/img/credit-card.svg" alt="">
+                </div>
+                <div class="title mleft-1">
+                    {{ 'crear-datospago.campoNumTarj' | translate }}
+                </div>
+            </div>
+            <div class="input-datos mtop-1">
+                <label for="utitular"></label>
+                <input type="text">
+            </div>
+            <div class="tarjeta mtop-1" fxLayout="row" fxLayoutAlign="">
+                <div>
+                    <div class="title">
+                        {{ 'crear-datospago.campoMes' | translate }}
+                
+                        </div>
+                    <div class="input-datostarj mtop-5px">
+                        <label for="utitular"></label>
+                        <input type="text">
+                    </div>
+                </div>
+                <div fxFlex="2"></div>
+                    <div>
+                        <div class="title">
+                            {{ 'crear-datospago.campoAño' | translate }}
+
+                        </div>
+                        <div class="input-datostarj mtop-5px">
+                            <label for="utitular"></label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div fxFlex="2"></div>
+
+                    <div>
+                        <div class="title">
+                            CVV               
+                        </div>
+                        <div class="input-datostarj mtop-5px">
+                            <label for="utitular"></label>
+                            <input type="text">
+                        </div>
+                    </div>
+            </div>    
+        </div>
+    </div>
+    <div class="buttons-pagos mtop-10" fxLayout="row" fxLayourAlign="center center">
+        <div class="boton-volver" fxLayout="row" fxLayoutAlign="center center" routerLink="/crear-cuenta">
+            <img class="mright-1" src="./assets/img/icon_volver.svg" alt="">
+            <div>
+                {{ 'crear-datospago.botonVolver' | translate }}
+
+            </div>
+        </div>
+        <div fxFlex></div>
+        <div class="button-finalizar" routerLink="/crear-cuenta">
+            <div >
+                {{ 'crear-datospago.botonFinalizar' | translate }}
+            </div>
+        </div>
+    </div>
+</div>

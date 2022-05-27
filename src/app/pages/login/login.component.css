@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+.login-container {
+  background-color: #EE4266 !important;
+  min-height: 100%;
+}
+
+.login-parent {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.login-parent .login_image img {
+  width: 70%;
+}
+
+.login-parent .login-form {
+  width: 100%;
+}
+
+.login-parent .custom-form .inputemail, .login-parent .custom-form .inputpass {
+  position: relative;
+}
+
+.login-parent .custom-form .inputemail .material-icons, .login-parent .custom-form .inputpass .material-icons {
+  position: absolute;
+  left: 10px;
+  top: 16px;
+  color: grey;
+}
+
+.login-parent .custom-form input {
+  display: block;
+  width: 250px;
+  padding: 1rem 1rem 1rem 3rem;
+  border: none;
+  -webkit-box-shadow: inset -5px -5px 15px rgba(255, 255, 255, 0.8), inset 5px 5px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: inset -5px -5px 15px rgba(255, 255, 255, 0.8), inset 5px 5px 10px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  font-family: 'Fredoka One', cursive;
+  font-size: 14px;
+}
+
+.login-parent .custom-form input.input-email {
+  border-radius: 1rem 1rem 0 0;
+  border: 3px solid black;
+  border-bottom: 1px solid black;
+  margin-bottom: 0;
+}
+
+.login-parent .custom-form input.input-pass {
+  margin-top: 0;
+  border-radius: 0 0 1rem 1rem;
+  border: 3px solid black;
+}
+
+.login-parent .login-button {
+  background-color: #ffd23f;
+  border-radius: 15px;
+  width: 10em;
+  height: 3em;
+  font-size: large;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  line-height: 2.50em;
+  font-family: 'Fredoka One', cursive;
+  border: rgba(255, 255, 255, 0.15);
+  border: 3px solid #292929;
+  border-radius: 15px;
+  opacity: 1;
+  background-color: whitesmoke;
+  -webkit-box-shadow: inset 0 -0.5em 0 -0.35em #292929;
+          box-shadow: inset 0 -0.5em 0 -0.35em #292929;
+}
+
+.login-parent .login-button:hover {
+  cursor: pointer;
+  -webkit-box-shadow: inset 0 -0.5em 0 -0.35em whitesmoke;
+          box-shadow: inset 0 -0.5em 0 -0.35em whitesmoke;
+  border: solid 3px white;
+  cursor: pointer;
+}
+
+.login-parent .example-section {
+  color: white;
+  font: 16px fredoka one;
+  cursor: pointer;
+}
+
+.login-parent .remind-pass {
+  color: black;
+  font: 14px fredoka one;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.login-parent .create-button {
+  width: 318px;
+  height: 54px;
+  background-color: #ffd23f;
+  border: solid 3px #292929;
+  border-radius: 15px;
+  text-align: center;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 0;
+  -webkit-box-shadow: inset 0 -0.5em 0 -0.35em #292929;
+          box-shadow: inset 0 -0.5em 0 -0.35em #292929;
+  text-align: center;
+  color: black;
+  font-size: 24px;
+  letter-spacing: 2px;
+  line-height: 2.20em;
+}
+
+.login-parent .create-button:hover {
+  cursor: pointer;
+  -webkit-box-shadow: inset 0 -0.5em 0 -0.35em white;
+          box-shadow: inset 0 -0.5em 0 -0.35em white;
+  border: solid 3px white;
+}
+
+.login-parent .example-section {
+  left: 30em;
+}
+
+@media (min-width: 600px) {
+  .login-parent {
+    width: 400px;
+  }
+  .login-parent .login_image img {
+    width: auto;
+  }
+}
+/*# sourceMappingURL=login.component.css.map */

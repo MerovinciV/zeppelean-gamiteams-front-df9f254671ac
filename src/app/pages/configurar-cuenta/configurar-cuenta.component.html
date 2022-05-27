@@ -1,0 +1,205 @@
+<div class="navparent" >
+    <div class="container" fxLayout="column" fxLayoutAlign="start space-around">
+        <div class="sumar-tokens" fxLayout fxLayoutAlign="start space-around">
+            <img src="./assets/img/add.svg" alt="">
+            <div class="mleft-1">{{ 'configurar-cuenta.titleConfigurar' | translate }}</div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+    <!-- TUS DATOS -->
+    <div class="container-buttons mtop-2" fxLayout="row" fxLayoutAlign="space-between center">
+        <div class="button-white" routerLink="/home">
+            <img src="./assets/img/icon_volver.svg" alt="">
+            <div>{{ 'configurar-cuenta.botonVolver' | translate }}</div>
+        </div>
+        <div class="button-white" (click)="logout()">Cerrar sesión</div>
+    </div>
+    <form [formGroup]="datosForm" (ngSubmit)="onDataSubmit()" class="tus-datos mtop-2">
+        <div class="title mbottom-1">{{ 'configurar-cuenta.titleDatos' | translate }}</div>
+        <div class="container-datos" fxLayout fxLayoutAlign="center space-between">
+            <div class="container-left" fxFlex="40" fxLayout="column">
+                <div class="item-datos">
+                    <div class="rotulo-datos">
+                        <img src="./assets/img/icon-user.svg" alt="">
+                        <div class="mleft-1">{{ 'configurar-cuenta.Name' | translate }}</div>
+                    </div>
+                    <div class="label-datos">
+                        <input 
+                        id="name"
+                        formControlName="name"
+                        type="text" 
+                        name="name" 
+                        required="required"
+                        />
+                    </div>
+                </div>
+                <div class="item-datos">
+                    <div class="rotulo-datos">
+                        <img src="./assets/img/icon-email.svg" alt="">
+                        <div class="mleft-1">Email</div>
+                    </div>
+                    <div class="label-datos">
+                        <input 
+                        id="email"
+                        formControlName="email"
+                        type="email"
+                        name="email" 
+                        required="required"
+                        />
+                    </div>
+                    <div *ngIf="profile && profile.unconfirmed_email">{{ profile.unconfirmed_email }} (Sin validar)</div>
+                </div>
+                <div class="item-datos">
+                    <div class="rotulo-datos">
+                        <img src="./assets/img/icon-logo.svg" alt="">
+                        <div class="mleft-1">Logo</div>
+                    </div>
+                    <div class="label-datos">
+                        <div>
+                            <img *ngIf="imageFile" class="preview-image" [src]="imageFile.link">
+                            <img *ngIf="!imageFile && profile && profile.company.has_logo" 
+                            class="preview-image" [src]="profile.company.logo_url">
+                            <input 
+                            type="file" 
+                            id="exampleInputFile" (change)="imagesPreview($event)"
+                            accept="image/*"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div fxFlex="20"></div>
+            <div class="container-right" fxFlex="40">
+                <div class="item-datos">
+                    <div class="button-white" (click)="openDialog()">
+                        <img src="./assets/img/icon-contra.svg" alt="">
+                        <div>{{ 'configurar-cuenta.botonChangePass' | translate }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-buttons mtop-2" fxLayout="row" fxLayoutAlign="flex-end center">
+            <button type="submit" class="button-green" [ngClass]="{ 'loading': loadingData }">
+                <div class="text-button" *ngIf="!loadingData">{{ 'configurar-cuenta.botonGuardar' | translate }}</div>
+                <div *ngIf="loadingData">Cargando...</div>
+            </button>
+        </div>
+    </form>
+
+    <!-- FACTURACIÓN -->
+
+    <form class="facturacion mtop-2" [formGroup]="billingForm" (ngSubmit)="onBillingSubmit()">
+        <div class="container-left">
+            <div class="title">
+                {{ 'configurar-cuenta.titleBillingInfo' | translate }}
+            </div>
+            <div class="rotulo-datos mtop-1" >
+                <img src="./assets/img/icon-empresa.svg" alt="">
+                <div class="mleft-1">CIF</div>
+            </div>
+                <div class="label-datos">
+                    <input 
+                    maxlength="9"
+                    id="billing_id"
+                    formControlName="billing_id"
+                    type="text" 
+                    name="billing_id" 
+                    required="required"
+                    />
+                </div>
+            <div class="item-datos mtop-2">
+                <div class="rotulo-datos">
+                    <img src="./assets/img/icon-empresa.svg" alt="">
+                    <div class="mleft-1">{{ 'configurar-cuenta.businessName' | translate }}</div>
+                </div>
+                <div class="label-datos">
+                    <input         
+                    id="billing_name"
+                    formControlName="billing_name"
+                    type="text" 
+                    name="billing_name" 
+                    required="required"
+                    />
+                </div>
+            </div>
+        </div>
+        <div class="container-buttons container-right mtop-2" fxLayout="" fxLayoutAlign="space-between space-around">
+            <div class="button-white" routerLink="/facturas">
+                <img src="./assets/img/icon-docu.svg" alt="">
+                <div>{{ 'configurar-cuenta.showInvoices' | translate }}</div>
+            </div>
+            <button class="button-green"  type="submit"  [ngClass]="{ 'loading': loadingBilling }">
+                <div>
+                    <div class="text-button" *ngIf="!loadingBilling">{{ 'configurar-cuenta.botonGuardar' | translate }}</div>
+                    <div *ngIf="loadingBilling">Cargando...</div>
+                </div>
+            </button>
+        </div>
+    </form>
+    
+    
+    <!-- ESCOGE TU PLAN -->
+    <form class="container-plan" [formGroup]="planForm" (ngSubmit)="onPlanSubmit()" >
+        <div class="title mtop-2 mbottom-1">{{ 'configurar-cuenta.titleChoosePlan' | translate }}</div>
+        <div class="decripcion-plan mbottom-1">{{ 'configurar-cuenta.subtitlePlan' | translate }}</div>
+        <div class="box-red-border" fxLayout="column" fxLayoutAlign="start center">
+            <div class="item-pack">
+                <div class="pack-plan">
+                    <mat-checkbox
+                        id="plan_basic"
+                        type="mat-checkbox"
+                        formControlName="plan_basic"
+                        (change)="onCheckboxChange($event, 'basic')">
+                    </mat-checkbox>
+                <img src="./assets/img/plan_basic.svg" alt="" class="icon-plan-select">
+                    <div class="plan-price">
+                        <div>Basic</div>
+                        <div class="precio-pack">{{ 'configurar-cuenta.free' | translate }}</div>
+                    </div>
+                </div>
+                <div class="descripcion-juego3">{{ 'configurar-cuenta.planBasic' | translate }}</div>
+            </div>
+            <div class="item-pack">
+                <div class="pack-plan">
+                    <mat-checkbox
+                        id="plan2"
+                        type="mat-checkbox"
+                        formControlName="plan_pro"
+                        (change)="onCheckboxChange($event, 'pro')">
+                    </mat-checkbox>
+                    <img src="./assets/img/diamond.svg" alt="" class="icon-plan-select">
+                    <div class="plan-price">
+                        <div>Pro</div>
+                        <div class="precio-pack">89€/mes + IVA</div>
+                    </div>
+                </div>
+                <div class="descripcion-juego3">{{ 'configurar-cuenta.planPro' | translate }}</div>
+            </div>
+            <div class="item-pack mleft-3">
+                <div class="pack-plan">
+                <img src="./assets/img/pencil.svg" alt="" class="icon-plan-select">
+                    <div class="plan-price">
+                        <div>Custom</div>
+                        <div class="precio-pack">{{ 'configurar-cuenta.ask' | translate }}</div>
+                    </div>
+                </div>
+                <div class="descripcion-juego2 mright-3">{{ 'configurar-cuenta.planCustom' | translate }}</div>
+                    <div class="button-white contacta">
+                        <a href="mailto: merovinci@icloud.com?Subject=Me%20gustaria%20saber%20mas%20sobre%20esto&Body=Name:%0D%0APhone%20Number:%0D%0ABlah%20blah">{{ 'configurar-cuenta.contact' | translate }}</a>
+                    </div>
+            </div>
+        </div>
+        <div class="container-buttons mtop-2" fxLayout="row" fxLayoutAlign="space-between center">
+            <div class="button-white" routerLink="/home">
+                <img src="./assets/img/icon_volver.svg" alt="">
+                <div>{{ 'configurar-cuenta.botonVolver' | translate }}</div>
+            </div>
+            <button class="button-green" type="submit" [ngClass]="{ 'loading': loadingPlan }">
+                <div class="text-button">{{ 'configurar-cuenta.botonGuardar' | translate }}</div>
+            </button>
+        </div>
+    </form>
+</div>

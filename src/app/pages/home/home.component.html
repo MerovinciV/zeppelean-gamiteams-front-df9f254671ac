@@ -1,0 +1,191 @@
+<div class="navparent" >
+    <div class="container" fxLayout="row" fxLayoutAlign="start center">
+        <div fxFlex class="navempresa-parent" fxLayout="row" fxLayoutAlign="start center" >
+            <div class="navempresa-img" fxLayout="row" fxLayoutAlign="center center">
+                <img class="" [src]="currentUser.company.logo_url" alt="Oops! error">
+            </div>
+            <div fxFlex="5"></div>
+            <div>
+                <div class="navempresa-nombre">
+                    {{ currentUser.name }}
+                </div>
+                <div class="navempresa-plan mtop-1" fxLayout="row">
+                    Plan básico.
+                    <div class="mleft-1" style="color:rgb(248, 212, 42);" routerLink="/configurar-cuenta">Upgrade</div>
+                </div>
+            </div>
+        </div>
+        <div class="navempresa-tokens">
+            <div class="container-tokens">
+                <div class="navempresa-tokens-img">
+                    <img class="" src="./assets/img/ranura.svg" alt="Oops ranura!">
+                </div>
+                <div class="text-tokens">
+                    {{ 'home.yourTokens' | translate }}
+                </div>
+                <div class="num-tokens">
+                    50
+                </div>
+                <div class="sumar-tokens" fxLayout="column" fxLayoutAlign="center center"
+                routerLink="/comprar-tokens">
+                    <img src="./assets/img/add.svg" alt="">
+                    <div>{{ 'home.buyTokens' | translate }}</div>
+                </div>
+            </div>
+        </div>
+        <div fxFlex="5"></div>
+        <div fxLayout fxLayoutAlign="center center">
+            <div class="" routerLink="/configurar-cuenta">
+                <img class="button-settings" src="./assets/img/setting.svg"
+                alt="no se ve!">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-modulo-partidas" fxLayout="column" fxLayourAlign="center center">
+    <div class="container dashboard ">
+        <div class="header-partidas" fxLayout fxLayourAlign="start center">
+            <div class="titulo-partidas">
+                <img src="./assets/img/cartas.svg" alt="">
+                <div class="mleft-1">{{ 'home.yourGames' | translate }}</div>
+            </div>
+            <div fxFlex></div>
+            <div class="boton-nueva-partida" routerLink="/games">
+                <img src="./assets/img/cartas_bn.svg" alt="">
+                    <div class="texto-nueva-partida">
+                        {{ 'home.newGame' | translate }}
+                    </div>
+            </div>
+        </div>
+        <div class="listado-partidas full-width mtop-2">
+            <div *ngFor="let game of games" class="item-partida">
+            <img  src="{{ getGameKindLogo(game.kind) }}" alt="" class="item-logo">
+            <div class="status-partida">
+                <div class="status-partida2">
+                    <div class="" [ngClass]=
+                        "{ 'partida-prog': game.status === 1,
+                        'partida-activa': game.status === 2,
+                        'partida-fin': game.status === 3 }">
+                        {{ getGameStatus(game.status) }}
+                        <img [routerLink]="'/games/' + game.id" src="./assets/img/icon_edit.svg" 
+                        class="boton-edit"
+                         *ngIf="game.status===1"
+                        >
+                        </div>
+                </div>
+                <div>{{ getStartsAt(game.starts_at) }}</div>
+            </div>
+            <div class="item-url">
+                <img src="./assets/img/icon-url.svg" alt="" class="icon-url">
+                <div class="url"> {{ enviroment.gameHost + game.external_id }} </div>
+                <button [cdkCopyToClipboard]="enviroment.gameHost + game.external_id"  class="icon-copiar">
+                    <img src="./assets/img/icon-copy.svg" alt="">
+                </button>
+                </div>
+        </div>
+
+            <!-- <div class="item-partida">
+                <img  src="./assets/img/logo_DC.svg" alt="" class="item-logo">
+                <div class="status-partida">
+                    <div class="status-partida2">
+                        <div class="partida-activa">Activa</div>
+                    </div>
+                    <p>2:00:00</p>
+                </div>
+                <div class="item-url">
+                    <img src="./assets/img/icon-url.svg" alt="" class="icon-url">
+                    <div class="url">http://localhost:4200/home/</div>
+                    <button [cdkCopyToClipboard]="'http://localhost:4200/#/home/'" class="icon-copiar">
+                        <img src="./assets/img/icon-copy.svg" alt="">
+                    </button>
+                </div>
+            </div>
+
+            <div class="item-partida">
+                <img src="./assets/img/logo_DK.svg" alt="" class="item-logo">
+                <div class="status-partida">
+                    <div class="status-partida2">
+                        <img class="icon_status" src="./assets/img/icon_programada.svg" alt="">
+                        <p class="partida-prog">Programada</p>
+                    
+                    </div>
+                    <p>23/07/21  - 03:00</p>
+                </div>
+                <div class="item-url">
+                    <img src="./assets/img/icon-url.svg" alt="" class="icon-url">
+                    <div class="url">https://www.youtube.com/watch?v=kFDJ-zskFhk</div>
+                    <button [cdkCopyToClipboard]="'http://localhost:4200/#/home/'" class="icon-copiar">
+                        <img src="./assets/img/icon-copy.svg" alt="">
+                    </button>
+                </div>
+            </div>
+
+            <div class="item-partida">
+                <img src="./assets/img/logo_DR.svg" alt="" class="item-logo">
+                <div class="status-partida">
+                    <div class="status-partida2">
+                        <img class="icon_status" src="./assets/img/flag_icon.svg" alt="">
+                        <p class="partida-fin">Finalizada</p>
+                    </div>
+                </div>
+                <div class="item-url-hidden">
+                    <img src="./assets/img/icon-url.svg" alt="" class="icon-url">
+                    <div class="url">https://www.youtube.com/watch?v=kFDJ-zskFhk</div>
+                    <button  class="icon-copiar">
+                        <img src="./assets/img/icon-copy.svg" alt="">
+                    </button>
+                </div>
+            </div>
+
+            <div class="item-partida">
+                <img src="./assets/img/logo_DR.svg" alt="" class="item-logo">
+                <div class="status-partida">
+                    <div class="status-partida2">
+                        <img class="icon_status" src="./assets/img/flag_icon.svg" alt="">
+                        <p class="partida-fin">Finalizada</p>
+                    </div>
+                </div>
+                <div class="item-url-hidden">
+                    <img src="./assets/img/icon-url.svg" alt="" class="icon-url">
+                    <div class="url">https://www.youtube.com/watch?v=kFDJ-zskFhk</div>
+                    <div class="icon-copiar">
+                        <img src="./assets/img/icon-copy.svg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-partida">
+                <img src="./assets/img/logo_DC.svg" alt="" class="item-logo">
+                <div class="status-partida">
+                    <div class="status-partida2">
+                        <img class="icon_status" src="./assets/img/flag_icon.svg" alt="">
+                        <p class="partida-fin">Finalizada</p>
+                    </div>
+                </div>
+                <div class="item-url-hidden">
+                    <img src="./assets/img/icon-url.svg" alt="" class="icon-url">
+                    <div class="url">https://www.youtube.com/watch?v=kFDJ-zskFhk</div>
+                    <div class="icon-copiar">
+                        <img src="./assets/img/icon-copy.svg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-partida">
+                <img src="./assets/img/logo_DK.svg" alt="" class="item-logo">
+                <div class="status-partida">
+                    <div class="status-partida2">
+                        <img class="icon_status" src="./assets/img/flag_icon.svg" alt="">
+                        <p class="partida-fin">Finalizada</p>
+                    </div>
+                </div>
+                <div class="item-url-hidden">
+                    <img src="./assets/img/icon-url.svg" alt="" class="icon-url">
+                    <div class="url">https://www.youtube.com/watch?v=kFDJ-zskFhk</div>
+                    <div class="icon-copiar">
+                        <img src="./assets/img/icon-copy.svg" alt="">
+                    </div>
+                </div>
+            </div> -->
+</div>

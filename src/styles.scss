@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body {
+    margin: 0;
+    font-family: 'Fredoka One', Roboto, "Helvetica Neue", sans-serif;
+    background-color: rgb(252, 242, 242);
+    position: relative;
+}
+
+#ngview {
+  padding-bottom: 5em;
+  overflow-y:visible;
+}
+
+.visible-scrollbar, .invisible-scrollbar {
+    display: block;
+    width: 10em;
+    overflow: auto;
+}
+
+$em-list: '0','1px','2px','3px','4px','5px','10px','15px','20px','25px','30px','35px','40px','45px','50px','200px';
+@each $current-num in $em-list {
+  .mtop-#{$current-num} {
+    margin-top: #{$current-num} !important;
+  }
+  .mbottom-#{$current-num} {
+    margin-bottom: #{$current-num} !important;
+  }
+  .mleft-#{$current-num} {
+    margin-left: #{$current-num} !important;
+  }
+  .mright-#{$current-num} {
+    margin-right: #{$current-num} !important;
+  }
+
+  .ptop-#{$current-num} {
+    padding-top: #{$current-num} !important;
+  }
+  .pbottom-#{$current-num} {
+    padding-bottom: #{$current-num} !important;
+  }
+  .pleft-#{$current-num} {
+    padding-left: #{$current-num} !important;
+  }
+  .pright-#{$current-num} {
+    padding-right: #{$current-num} !important;
+  }
+}
+
+$em-list: 1,2,3,4,5,6,7,8,9,10,15;
+@each $current-num in $em-list {
+  .mtop-#{$current-num} {
+    margin-top: #{$current-num}em !important;
+  }
+  .mbottom-#{$current-num} {
+    margin-bottom: #{$current-num}em !important;
+  }
+  .mleft-#{$current-num} {
+    margin-left: #{$current-num}em !important;
+  }
+  .mright-#{$current-num} {
+    margin-right: #{$current-num}em !important;
+  }
+
+  .ptop-#{$current-num} {
+    padding-top: #{$current-num}em !important;
+  }
+  .pbottom-#{$current-num} {
+    padding-bottom: #{$current-num}em !important;
+  }
+  .pleft-#{$current-num} {
+    padding-left: #{$current-num}em !important;
+  }
+  .pright-#{$current-num} {
+    padding-right: #{$current-num}em !important;
+  }
+}
+
+.a{
+  text-decoration: none;
+  color: white;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto !important;
+}
+
+.button-white{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 240px;
+    background-color: white;
+    border: solid 2px #292929;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgb(41, 41, 41, 0.5);
+    cursor: pointer;
+    line-height: 40px;
+    box-shadow: inset 0 0 0 0 #EE4266;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+
+    &:hover {
+        // box-shadow: 2px 2px 2px rgb(41, 41, 41, 0.9);
+        box-shadow: inset 0 0 0 50px #EE4266;
+
+    }
+}
+
+.button-green {
+    width: 240px;
+    background-color: #A5EB78;
+    border: solid 2px #292929;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgb(41, 41, 41, 0.5);
+    text-align: center;
+    cursor: pointer;
+    line-height: 40px;
+
+    &:hover {
+        color: white;
+        box-shadow: 2px 2px 2px rgb(41, 41, 41, 0.7);
+    }
+    &.loading {
+      background-color: grey;
+    }
+}
+
+.text-button{
+  font-size:14px;
+}
+
+.box-red-border {
+    background-color: white;
+    border: solid 3px #EE4266;
+    border-radius: 10px;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 600px) {
+    .container {
+        width: 85%;
+    }
+}
+@media (min-width: 960px) {
+    .container {
+        width: 960px;
+    }
+}
+
+body::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: rgb(252, 242, 242);        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #ffdbb9;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid #ffdbb9;  /* creates padding around scroll thumb */
+}

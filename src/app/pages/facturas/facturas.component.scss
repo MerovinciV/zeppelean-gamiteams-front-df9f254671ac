@@ -1,0 +1,88 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Fredoka One', cursive;
+}
+
+
+.navparent{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    max-height: 14em;
+    background-color: #EE4266;
+    border-bottom: solid;    
+    width: 100%;
+    padding: 1em 0;
+}
+.sumar-tokens{
+    display: flex;
+    font-family: 'Fredoka One', cursive;
+    font-size: 20px;
+    color: white;
+    line-height: 50px;
+
+    .img{
+            height: 40px;
+        
+    }
+}
+
+.super-container-fact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container-tokens-hidden {
+    display: flex;
+    align-items: center;
+    visibility: hidden;
+}
+
+.item-factura {
+    display: flex;
+    align-items: center;
+    height: max-content;
+    justify-content: space-around;
+    border: solid 3px #EE4266;
+    border-radius: 10px;
+    background-color: white;
+    margin-bottom: 0.5rem;
+    margin-top: 1em;
+    height: 60px;
+
+
+}
+
+.fact-fecha , .ref-factura, .desc-factura {
+    display: flex;
+    align-items: center;
+}
+
+.fact-fecha img, .ref-factura img, .desc-factura img {
+    margin-right: 0.5rem;
+    width: 21px;
+}
+
+.desc-factura {
+    cursor: pointer;
+}
+
+.desc-factura p{
+    color: #818181;
+}
+
+.desc-factura:hover p {
+    color: #A5EB78;
+}
+
+.title-facturas{
+    font-size: 22px;
+}

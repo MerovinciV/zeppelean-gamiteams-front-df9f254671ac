@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Fredoka One', cursive;
+}
+
+.navparent{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    max-height: 12em;
+    background-color: #EE4266;
+    border-bottom: solid;    
+    width: 100%;
+    padding: 1em 0;
+}
+
+.sumar-tokens{
+    line-height: 40px;
+    font-size:25px ;
+    color: white;
+}
+
+.navempresa-tokens{
+
+    .navempresa-tokens-img{
+        margin-left: -35px;
+        height: 5.6em;
+    }
+    .container-tokens {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border: solid 3px #292929;
+        border-radius: 10px;
+        background-color: white;
+        padding: 0 1em;
+    }
+    .text-tokens{
+        align-items: left;
+        color:black;
+        font-family: 'Fredoka One', cursive;
+        font-size: 16px;
+    }
+    .num-tokens{
+        color: #EE4266;
+        font-size: 35px;
+        -webkit-text-stroke: 2px black;        
+    }
+    .sumar-tokens{
+        cursor: pointer;
+        font-family: 'Fredoka One', cursive;
+        color: black;
+        width: 60px;
+            .img{
+                height: 40px;
+            
+        }
+    }
+}
+
+.super-container-tienda {
+    display: flex;
+    justify-content: center;
+}
+
+.container-tienda {
+    width: 900px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.header-tienda {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.title{
+    font-size: 20px;
+}
+.subtitle {
+    font-size: 14px;
+    color: #818181;
+    text-align: center;
+    width: 700px;
+    text-align: center;
+    margin: 0;
+}
+
+.iva {
+    width: 900px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    color: #818181;
+}
+
+.selector-packs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 900px;
+}
+
+.pack-token {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+}
+
+.imagen-pack {
+    width: 230px;
+    height: 230px;
+    background-color: white;
+    border: solid 3px #292929;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imagen-pack img {
+    width: 190px;
+}
+
+.boton-comprar {
+    background-color: #EE4266;
+    color: white;
+    border: solid 3px #292929;
+    border-radius: 10px;
+    width: 230px;
+    height: 40px;
+    box-shadow: 2px 2px 2px rgb(41, 41, 41, 0.5);
+    text-align: center;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.boton-comprar:hover {
+    box-shadow: 2px 2px 2px rgb(41, 41, 41, 0.8);
+}
+
+.boton-comprar {
+    
+    .precio{
+        color: white;
+        font-size: 30px;
+        text-align: center;
+        margin: 0;
+        line-height: 40px;
+    }
+}
+
+
+.boton-comprar:hover p {
+    color: #A5EB78;
+}
+
+.precio-token {
+    color: #B2ADAD;
+    text-align: center;
+    margin-top: 1em;
+}
+
+.boton-volver {
+    display: flex;
+    background-color: white;
+    border: solid 2px #292929;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgb(41, 41, 41, 0.5);
+    cursor: pointer;
+    width: 12em;
+    line-height: 40px;
+}
+
+.boton-volver:hover {
+    box-shadow: 2px 2px 2px rgb(41, 41, 41, 0.9);
+}

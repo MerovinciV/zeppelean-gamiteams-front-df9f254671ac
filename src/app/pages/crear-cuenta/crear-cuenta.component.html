@@ -1,0 +1,125 @@
+<div class="navparent" >
+    <div class="container" fxLayout="column" fxLayoutAlign="start space-around">
+        <div class="sumar-tokens" fxLayout fxLayoutAlign="start space-around">
+            <img src="./assets/img/add.svg" alt="">
+            <div class="mleft-1">{{ 'crear-cuenta.titleNavbar' | translate }}</div>
+        </div>
+    </div>
+</div>
+    
+<div class="super-container-fact">
+
+    <div class="container-config" >
+        <div class="tus-datos  mbottom-3" >
+            <div class="title-datos mbottom-2 mtop-1" >{{ 'crear-cuenta.titleDatos' | translate }}</div>
+            <div class="container-datos" >
+                <mat-grid-list cols="2" rowHeight="5:1">
+                    <mat-grid-tile>
+                        <div class="item-datos" >
+                            <div class="rotulo-datos">
+                                <img src="./assets/img/icon-user.svg" alt="">
+                                <div class="mleft-1" style="color: #818181;">
+                                    {{ 'crear-cuenta.datosNombre' | translate }}
+                            </div>
+                        </div>
+                        <div class="label-datos mbottom-1">
+                            <label for="uname"></label>
+                            <input type="text" name="uname" required>
+                        </div>
+                    </div>
+                    </mat-grid-tile>
+                    <mat-grid-tile>
+                        <div class="item-datos">
+                            <div class="rotulo-datos">
+                                <img src="./assets/img/icon-contra.svg" alt="">
+                                <div class="mleft-1" style="color: #818181;">
+                                    {{ 'crear-cuenta.datosContraseña' | translate }}
+                                </div>
+                            </div>
+                            <div class="label-datos mbottom-1">
+                                <label for="upass"></label>
+                                <input type="text" placeholder="******" name="uname" required>
+                            </div>
+                        </div>
+                    </mat-grid-tile>
+                    <mat-grid-tile>
+                        <div class="item-datos">
+                            <div class="rotulo-datos">
+                                <img src="./assets/img/icon-email.svg" alt="">
+                                <div class="mleft-1" style="color: #818181;">
+                                    {{ 'crear-cuenta.datosEmail' | translate }}
+                                </div>
+                            </div>
+                            <div class="label-datos">
+                                <label for="uemail"></label>
+                                <input type="text" name="uname" required>
+                            </div>
+                        </div>
+                    </mat-grid-tile>
+                    <mat-grid-tile>
+                        <div class="item-datos ">
+                            <div class="rotulo-datos ">
+                                <img src="./assets/img/icon-empresa.svg" alt="">
+                                <div class="mleft-1" style="color: #818181;">
+                                    {{ 'crear-cuenta.datosEmpresa' | translate }}
+                                </div>
+                            </div>
+                            <div class="label-datos">
+                                <label for="ucompany"></label>
+                                <input type="text" name="uname" required>
+                            </div>
+                        </div>
+                    </mat-grid-tile>
+                  </mat-grid-list>
+            </div>
+        </div>
+
+        <div class="container-plan" >
+            <div class="title-plan mbottom-1">{{ 'crear-cuenta.titlePlan' | translate }}</div>
+            <div class="decripcion-plan mbottom-1">{{ 'crear-cuenta.subtitlePlan' | translate }}
+
+            </div>
+
+            <div class="seleccion-juegos">
+
+                <div class="item-pack">
+                    <div class="pack-plan">
+                    <mat-checkbox></mat-checkbox>
+                    <img src="./assets/img/plan_basic.svg" alt="" class="icon-plan-select">
+                    <div class="plan-price">
+                    <div>Basic</div>
+                    <div class="precio-pack">{{ 'crear-cuenta.precioBasic' | translate }}</div>
+                    </div></div>
+                    <div class="descripcion-juego3">{{ 'crear-cuenta.descripcionBasic' | translate }}</div>
+                </div>
+
+                <div class="item-pack">
+                    <div class="pack-plan">                    
+                    <mat-checkbox></mat-checkbox>
+                    <img src="./assets/img/diamond.svg" alt="" class="icon-plan-select">
+                    <div class="plan-price">
+                        <div>Pro</div>
+                        <div class="precio-pack">{{ 'crear-cuenta.precioPro' | translate }}</div>
+                        </div>
+                    </div>
+                    <div class="descripcion-juego3">{{ 'crear-cuenta.descripcionPro' | translate }}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="botones-finalizar mtop-2" fxLayout="row" fxLayoutAlign="space-around space-between">
+
+            <div class="boton-volver" fxLayout="row" fxLayoutAlign="center center" routerLink="/login">
+                <img src="./assets/img/icon_volver.svg" alt="">
+                <div class="mleft-1" >{{ 'crear-cuenta.botonSalir' | translate }}</div>
+            </div>
+
+            <div class="boton-guardar" routerLink="/crear-datospago">
+                {{ 'crear-cuenta.botonContinuar' | translate }}
+            </div>
+
+        </div>
+    </div>
+    
+</div>

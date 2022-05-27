@@ -1,0 +1,166 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Fredoka One', cursive;
+}
+
+
+.navparent{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    max-height: 14em;
+    background-color: #EE4266;
+    border-bottom: solid;    
+    width: 100%;
+    padding: 1em 0;
+}
+.sumar-tokens{
+    display: flex;
+    font-family: 'Fredoka One', cursive;
+    font-size: 20px;
+    color: white;
+    line-height: 50px;
+
+    .img{
+            height: 40px;
+        
+    }
+}
+
+.title{
+    font-size: 20px;
+}
+
+.icon-plan-select {
+    margin-right: 2rem;
+    margin-left: 1rem;
+    width: 50px;
+    height: 60px;
+}
+
+.pack-plan {
+    display: flex;
+    align-items: center;
+}
+
+.plan-price {
+   font-size: 12px;
+}
+
+.precio-pack {
+    color: #5FB527;
+}
+
+.descripcion-juego2 {
+    color: #818181;
+    font-size: 14px;
+    width: 350px;
+}
+
+.descripcion-juego3 {
+    color: #818181;
+    font-size: 14px;
+    width: 550px;
+}
+
+.item-pack {
+    display: flex;
+    align-items: center;
+    width: 800px;
+    justify-content: space-between;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+.decripcion-plan {
+    font-size: 14px;
+    color: #818181;
+}
+
+.title-datos{
+    font-size: 18px;
+}
+
+.button-white.contacta{
+    width: 100px;
+
+    a{
+        text-decoration: none;
+        color: black;
+    }
+}
+
+.super-container-fact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-tokens-hidden {
+    display: flex;
+    align-items: center;
+    visibility: hidden;
+}
+
+.item-factura {
+    display: flex;
+    align-items: center;
+    width: 900px;
+    justify-content: space-around;
+    border: solid 3px #EE4266;
+    border-radius: 10px;
+    background-color: white;
+    margin-bottom: 0.5rem;
+}
+
+.fact-fecha , .ref-factura, .desc-factura {
+    display: flex;
+    align-items: center;
+}
+
+.fact-fecha img, .ref-factura img, .desc-factura img {
+    margin-right: 0.5rem;
+    width: 21px;
+}
+
+.desc-factura {
+    cursor: pointer;
+}
+
+.desc-factura p{
+    color: #818181;
+}
+
+.desc-factura:hover p {
+    color: #A5EB78;
+}
+
+.rotulo-datos{
+    display: flex;
+    font-size: 14px;
+    color: #818181;
+    margin-bottom: 1em;
+}
+
+.item-datos{
+    margin-bottom:1em;
+}
+
+.label-datos input{
+    width: 250px;
+    height: 20px;
+}
+
+.text-button{
+    font-size:14px;
+}
+
+.preview-image{
+    max-width: 200px;
+}
